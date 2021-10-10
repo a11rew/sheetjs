@@ -868,6 +868,7 @@ var PRN = (function() {
 			}
 			else sep = guess_sep(str.slice(0,1024));
 		}
+		else if(opts && opts.FS) sep = opts.FS;
 		else sep = guess_sep(str.slice(0,1024));
 		var R = 0, C = 0, v = 0;
 		var start = 0, end = 0, sepcc = sep.charCodeAt(0), instr = false, cc=0, startcc=str.charCodeAt(0);
